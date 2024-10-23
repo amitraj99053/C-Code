@@ -8,6 +8,7 @@ int main()
 	printf("Enter no to Check Odd/Even : ");
 	scanf("%d", &num);
 	
+	// AND Operator
 	if(num & 1){
 		printf("Odd no");
 	}else

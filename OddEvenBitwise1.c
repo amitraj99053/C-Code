@@ -8,6 +8,7 @@ int main()
 	printf("Enter no to Check Odd/Even : ");
 	scanf("%d", &num);
 	
+	// Right shift and multiply back
 	if ((num >> 1) << 1 == num) {
         printf("%d is even.\n", num);
     } else {
