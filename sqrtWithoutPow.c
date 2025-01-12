@@ -12,7 +12,7 @@ int square(int n) {
     int result = 0;
     int i;
     for (i = 1; i <= n; i++) {
-        result += 2 * i - 1; // Add consecutive odd numbers
+        result += 2 * i - 1; 
     }
 
     return result;
