@@ -1,13 +1,12 @@
 #include <stdio.h>
+// Multiplication of 2D Array
 
 int main() {
     int rows1, cols1, rows2, cols2, i, j, k;
 
-    // Get dimensions of the first matrix
     printf("Enter rows and columns for the first matrix: ");
     scanf("%d %d", &rows1, &cols1);
 
-    // Get dimensions of the second matrix
     printf("Enter rows and columns for the second matrix: ");
     scanf("%d %d", &rows2, &cols2);
 
@@ -22,7 +21,6 @@ int main() {
     int matrix2[rows2][cols2];
     int result[rows1][cols2];
 
-    // Get elements of the first matrix
     printf("Enter elements for the first matrix:\n");
     for (i = 0; i < rows1; i++) {
         for (j = 0; j < cols1; j++) {
@@ -30,7 +28,6 @@ int main() {
         }
     }
 
-    // Get elements of the second matrix
     printf("Enter elements for the second matrix:\n");
     for (i = 0; i < rows2; i++) {
         for (j = 0; j < cols2; j++) {
@@ -38,7 +35,7 @@ int main() {
         }
     }
 
-    // Perform matrix multiplication
+    // matrix multiplication
     for (i = 0; i < rows1; i++) {
         for (j = 0; j < cols2; j++) {
             result[i][j] = 0;
@@ -48,7 +45,6 @@ int main() {
         }
     }
 
-    // Display the result
     printf("Resultant matrix:\n");
     for (i = 0; i < rows1; i++) {
         for (j = 0; j < cols2; j++) {

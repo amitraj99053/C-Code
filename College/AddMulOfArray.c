@@ -1,45 +1,48 @@
+// Addition and multiplication of 2D array
 #include <stdio.h>
-#include <stdlib.h>
-// Addition of 2D Array
 
 int main() {
-    int rows, cols, i, j;
+    int rows, cols, i, j, k;
 
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
-    printf("Enter the number of columns: ");
-    scanf("%d", &cols);
+    printf("Enter rows and columns: ");
+    scanf("%d %d", &rows, &cols);
 
-    // Declare the matrices
     int matrix1[rows][cols];
     int matrix2[rows][cols];
     int sum[rows][cols];
+    int product[rows][cols];
 
-    printf("Enter the elements of the first matrix:\n");
+    printf("Enter elements for the first matrix:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
             scanf("%d", &matrix1[i][j]);
         }
     }
 
-    printf("Enter the elements of the second matrix:\n");
+    printf("Enter elements for the second matrix:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
             scanf("%d", &matrix2[i][j]);
         }
     }
 
-    // Add the matrices
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < cols; j++) {
-            sum[i][j] = matrix1[i][j] + matrix2[i][j];
-        }
-    }
-
     printf("Sum of the matrices:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
+            sum[i][j] = matrix1[i][j] + matrix2[i][j];
             printf("%d ", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Product of the matrices:\n");
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
+            product[i][j] = 0;
+            for (k = 0; k < cols; k++) {
+                product[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+            printf("%d ", product[i][j]);
         }
         printf("\n");
     }
