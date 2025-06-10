@@ -1,15 +1,12 @@
 // Forward Traversal (Iterative) of Doubly Linked List
-
 #include <stdio.h>
 
-// Definition of a Node in a doubly linked list
 struct Node {
     int data;
     struct Node *next;
     struct Node *prev;
 };
 
-// Function to traverse the doubly linked list in forward direction
 void forwardTraversal(struct Node* head) {
     struct Node* curr = head;
 
